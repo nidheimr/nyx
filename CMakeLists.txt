@@ -20,5 +20,5 @@ target_link_libraries(nyx PRIVATE
 
 set_target_properties(nyx PROPERTIES
     C_STANDARD 17
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/$<0:>
 )
