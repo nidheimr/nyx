@@ -8,7 +8,7 @@ Nyx is a simple application that creates a window using win32 then draws a trian
 
 This project uses CMake.
 
-Assuming you have CMake installed and some form of windows C compiler (such as MSVC) and added to PATH, you can run the following commands inside the project directory:
+Assuming you have CMake installed and some form of windows C compiler (such as MSVC), you can run the following commands inside the project directory:
 1. `cmake -S . -B build`
 2. `cmake --build build`
 
