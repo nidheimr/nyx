@@ -1,0 +1,6 @@
+[submodule "external/lux"]
+	path = external/lux
+	url = git@github.com:nidheimr/lux.git
+[submodule "external/rias"]
+	path = external/rias
+	url = git@github.com:nidheimr/rias.git
