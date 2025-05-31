@@ -14,4 +14,4 @@ Assuming you have CMake and a C compiler, you can run the following commands ins
 1. `cmake -S . -B build`
 2. `cmake --build build`
 
-The library will be placed inside `./bin/`.
+The executable will be placed inside `./bin/`.
