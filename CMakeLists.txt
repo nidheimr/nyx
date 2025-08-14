@@ -41,3 +41,7 @@ set_target_properties(nyx PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY ${common_bin_dir}
     LIBRARY_OUTPUT_DIRECTORY ${common_bin_dir}
 )
+
+if (DEBUG_MODE)
+    target_compile_definitions(nyx PRIVATE DEBUG_MODE)
+endif()

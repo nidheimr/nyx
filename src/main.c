@@ -1,3 +1,6 @@
+#include "engine/macros.h"
+#include "engine/shaders.h"
+
 #include <lux.h>
 #include <stdio.h>
 
@@ -14,30 +17,26 @@ void on_error(const char* desc)
 int main()
 {
     lx_init((lx_init_props){
-        .title = "Lux Test",
+        .title = "Nyx",
         .width = 1280,
         .height = 720,
-
         .on_resize = on_resize,
         .on_error = on_error,
     });
 
-
-    printf("\033[?1049h");
+    unsigned int main_shader = create_shader_vf(RESOURCE("shaders/default.vert"), RESOURCE("shaders/default.frag")); 
 
     while (lx_is_alive())
     {
         lx_poll_events();
 
-        printf("\033[2J");
-        printf("\033[H");
-        printf("gl version %g\n", lx_get_loaded_gl_version());
-        printf("fps %lf\n", lx_get_fps());
+        glUseProgram(main_shader);
 
         lx_swap_buffers();
     }
 
-    printf("\033[?1049l");
+    destroy_shader(main_shader);
+
     lx_quit();
     return 0;
 }
