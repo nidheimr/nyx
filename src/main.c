@@ -1,5 +1,5 @@
 #include "engine/macros.h"
-#include "engine/shaders.h"
+#include "engine/render/shaders.h"
 
 #include <lux.h>
 #include <stdio.h>

@@ -1,7 +1,6 @@
 #include "shaders.h"
 
 #include <lux.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 unsigned int _create_shader(unsigned int type, const char* file)
@@ -23,7 +22,7 @@ unsigned int _create_shader(unsigned int type, const char* file)
     if (!success)
     {
         glGetShaderInfoLog(shader, 512, NULL, log);
-        printf("error compiling shader >> %s", log);
+        lx_error("error compiling shader >> %s", log);
         return 0;
     }
 
@@ -58,7 +57,7 @@ unsigned int create_shader_vf(const char* vert_file, const char* frag_file)
     if (!success)
     {
         glGetProgramInfoLog(sp, 512, NULL, log);
-        printf("error linking program >> %s", log);
+        lx_error("error linking program >> %s", log);
         return 0;
     }
 
